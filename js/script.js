@@ -29,8 +29,8 @@ counters.forEach( (item, i) => {
     $('.menu__anchor').click(function(){
         const menu = document.querySelector('.menu');
         menu.classList.remove('active');
-        const anchor = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+        let anchor = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(anchor).offset().top + "px"});
         return false;
     });
 
